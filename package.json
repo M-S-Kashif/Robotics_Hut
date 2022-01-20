@@ -1,0 +1,19 @@
+{
+  "name": "robotics_hut",
+  "version": "1.0.0",
+  "description": "SIT725 Group Project",
+  "main": "index.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/siddique-shahida/Robotics_Hut.git"
+  },
+  "author": "",
+  "license": "MIT",
+  "bugs": {
+    "url": "https://github.com/siddique-shahida/Robotics_Hut/issues"
+  },
+  "homepage": "https://github.com/siddique-shahida/Robotics_Hut#readme"
+}

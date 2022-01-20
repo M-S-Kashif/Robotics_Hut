@@ -1,0 +1,25 @@
+/* Font to everything. Why? Because I can */
+* {
+    font-family: 'Roboto', sans-serif;
+}
+
+/* no scrolling */
+.my-image {
+    max-height: 850px;
+    /* balanced as all things should be */
+    min-width: 100%;
+}
+
+/* underline look yuk */
+a {
+    text-decoration: none;
+}
+
+
+.center {
+    position: absolute;
+    left: 50%;
+    top: 50%;
+    transform: translate(-50%, -50%);
+    padding: 10px;
+}
