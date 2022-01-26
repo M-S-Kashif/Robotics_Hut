@@ -13,8 +13,8 @@ router.get('/nouser', (req, res) => {
 });
 
 //HOME API...
-router.get('/home', (req, res) => {
-    res.render('home.ejs');
+router.get('/homepage', (req, res) => {
+    res.render('./homepage.ejs');
 });
 
 //Register APIs...
@@ -32,7 +32,7 @@ router.post('/register', (req, res) => {
     console.log("New Account Registered!");
 
     setTimeout(() => {
-        res.redirect('/login');
+        return res.redirect('/login');
     }, 5000);
 });
 
@@ -47,37 +47,30 @@ router.post('/login', (req, res) => {
     let loggedIn = controllerLayer.findAccount(user);
     console.log(loggedIn);
 
-    if (!loggedIn) {
+    if (loggedIn) {
         setTimeout(() => {
-            //res.redirect('/home');
-            res.sendFile("home.html", { root: "./public" });
-            console.log("Logged at Home!");
+            return res.redirect('http://localhost:8080/homepage');
+            console.log("Logged in at Home!")
         }, 5000);
     } else {
         setTimeout(() => {
-            //res.redirect('/nouser');
-            res.sendFile("nouser.html", { root: "./public" });
+            res.redirect('/nouser');
             console.log("No User Found!");
         }, 500);
     }
 });
 
-//Change Password APIs...
 
+//Change Password APIs (Auxiliary Function; will be implemented later on)...
 
 //Other APIs...
 router.get('/accounts', (req, res) => {
     controllerLayer.findAccount(res);
-    //res.json({ result: users });    //Check this from test.js...
     //res.sendStatus(200);                  //Send the statuscode only once...
 });
 
 router.post('/accounts', (req, res) => {
-    console.log('body', req.body);
-
-    let newaccount = req.body;
-    res.send(newaccount);
-    //controllerLayer.registerUser(newaccount);
+    res.send(req.body);
 });
 
 //Exporting all the contents for our script...

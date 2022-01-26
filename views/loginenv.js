@@ -1,4 +1,4 @@
-const loginButton = document.getElementById('loginbutton');
+const loginButton = document.getElementById('button');
 
 function checkResponse(res) {
     if (res.ok) {

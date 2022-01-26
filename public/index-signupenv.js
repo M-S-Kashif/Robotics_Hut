@@ -1,4 +1,4 @@
-const loginButton = document.getElementById('loginbutton');
+const submitButton = document.getElementById('button');
 
 function checkResponse(res) {
     if (res.ok) {
@@ -11,20 +11,22 @@ function checkResponse(res) {
 }
 
 
-function loginUser(event) {
+function registerUser(event) {
     event.preventDefault();
+    const firstname = document.getElementById('fname').value;
+    const lastname = document.getElementById('lname').value;
+    const email = document.getElementById('email').value;
     const username = document.getElementById('username').value;
     const password = document.getElementById('password').value;
 
-    let loguser = { username, password };
-    console.log(loguser);
-
-    fetch('http://localhost:8080/login', {
+    let newuser = {firstname, lastname, email, username, password};
+    console.log(newuser);
+    fetch('http://localhost:8080/register', {
         method: 'POST',
-        body: JSON.stringify(loguser),
+        body: JSON.stringify(newuser),
         headers: { 'Content-Type': 'application/json' }
     }).then(res => checkResponse(res))
         .catch(err => console.log(err))
 }
 
-loginButton.addEventListener("click", loginUser, false);
+submitButton.addEventListener("click", registerUser, false);
