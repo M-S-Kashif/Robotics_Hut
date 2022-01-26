@@ -23,3 +23,13 @@ a {
     transform: translate(-50%, -50%);
     padding: 10px;
 }
+
+.center-h {
+
+    margin: auto;
+
+    width: 50%;
+
+    padding: 10px;
+
+}
