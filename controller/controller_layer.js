@@ -1,7 +1,7 @@
-console.log("Controller Layer");
+console.log(" Main Controller Layer");
 
 //Importing DB Layer in Service Layer...
-let dbo = require("../db/accounts_db");
+let dbo = require("../db/database");
 let Accounts = dbo.db("RoboticsHut").collection("accounts");
 
 
@@ -72,7 +72,8 @@ const registerUser = (account, res) => {
         } else {
             //Adding contents into an array...
             //dummyAccounts.push(account);
-            console.log('Project Inserted: ', result);
+            console.log('Account Inserted: ', result);
+            //res.json({ result: [result.username, result.lastname, result.username, result.email, result.password]});
         }
     });
 }

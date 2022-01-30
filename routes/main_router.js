@@ -1,20 +1,14 @@
-console.log("Router Layer");
+console.log("Main Router Layer");
 const express = require("express");
-//const bcrypt = require("bcrypt");
 const router = express.Router();     //Initializes a Router...
 
 //Importing Service Layer in Router Layer...
 const controllerLayer = require("../controller/controller_layer");
-//const studentControllerLayer = require("../controller/student_controller_layer");
+
 
 //Unsuccessful Login API...
 router.get('/nouser', (req, res) => {
     res.render('nouser.ejs');
-});
-
-//HOME API...
-router.get('/homepage', (req, res) => {
-    res.render('./homepage.ejs');
 });
 
 //Register APIs...
@@ -23,9 +17,6 @@ router.get('/register', (req, res) => {
 });
 
 router.post('/register', (req, res) => {
-    //const hashedPassword = await bcrypt.hash(req.body.password, 10);
-    //console.log(hashedPassword);
-
     let newaccount = req.body;
     console.log('Inserting new account',newaccount);
     controllerLayer.registerUser(newaccount);
@@ -49,8 +40,8 @@ router.post('/login', (req, res) => {
 
     if (loggedIn) {
         setTimeout(() => {
-            return res.redirect('http://localhost:8080/homepage');
             console.log("Logged in at Home!")
+            return res.redirect('http://localhost:8080/student/homepage');
         }, 5000);
     } else {
         setTimeout(() => {
@@ -61,12 +52,15 @@ router.post('/login', (req, res) => {
 });
 
 
-//Change Password APIs (Auxiliary Function; will be implemented later on)...
+//Change Password APIs 
+//(Auxiliary Function; will be implemented later on)...
 
 //Other APIs...
 router.get('/accounts', (req, res) => {
     controllerLayer.findAccount(res);
-    //res.sendStatus(200);                  //Send the statuscode only once...
+
+    //Assertions for API...
+    //res.sendStatus(200);          //Uncomment assertions during testing only...
 });
 
 router.post('/accounts', (req, res) => {
