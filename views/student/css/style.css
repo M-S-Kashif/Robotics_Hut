@@ -1,0 +1,47 @@
+/* Font to everything. Why? Because I can */
+* {
+    font-family: "Roboto", sans-serif;
+}
+
+/* no scrolling */
+.my-image {
+    max-height: 850px;
+    /* balanced as all things should be */
+    min-width: 100%;
+}
+
+/* underline look yuk */
+a {
+    text-decoration: none;
+}
+
+.center {
+    position: absolute;
+    left: 50%;
+    top: 50%;
+    transform: translate(-50%, -50%);
+    padding: 10px;
+}
+
+.quiz-banner img {
+    height: 400px;
+    width: 100%;
+    object-fit: cover;
+}
+
+.questions {
+    background-color: rgba(0, 0, 0, 0.1);
+    padding: 12px;
+    border-radius: 8px;
+    margin-bottom: 24px;
+}
+
+    .questions p {
+        font-weight: 500;
+        font-size: 18px;
+    }
+
+    .questions .form-select {
+        background-color: whitesmoke;
+        border: none;
+    }

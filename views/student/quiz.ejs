@@ -1,0 +1,109 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Quiz Time!</title>
+    <!-- tab icon can be changed laetr to whatever we want -->
+    <link rel="icon" href="./student-images/signInIcon.png" />
+
+    <!-- Bootstrap -->
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.1.1/dist/css/bootstrap.min.css"
+          rel="stylesheet"
+          integrity="sha384-F3w7mX95PdgyTmZZMECAngseQB83DfGTowi0iMjiWaeVhAn4FJkqJByhZMI3AhiU"
+          crossorigin="anonymous" />
+
+    <!-- Google Fonts -->
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link href="https://fonts.googleapis.com/css2?family=Roboto:wght@100;300;400;500;700&display=swap" rel="stylesheet" />
+
+    <!-- My CSS -->
+    <link rel="stylesheet" href="css/style.css" />
+</head>
+
+<body>
+    <main>
+        <div class="container my-5">
+            <div class="my-5">
+                <h2>Quiz Time! Are you Ready?</h2>
+            </div>
+            <div class="quiz-banner text-center">
+                <img src="./student-images/quiz-time.jpg" alt="quiz time" />
+                <p class="my-3 text-start text-muted">
+                    Okay, let's keep it simple: You got 10 minutes for 10 extremely tough questions. These revolve from the fields of
+                    Electrical Circuits, Programming, and also a bit of A.I. Fail to answer all the questions or if you ran out time, then
+                    you lose!
+                </p>
+                <p class="my-3 text-start text-muted">Click this button and start whenever you are ready.</p>
+            </div>
+            <!-- Button -->
+            <div>
+                <div class="row">
+                    <div class="col-sm-12 col-md-4 col-lg-4"></div>
+                    <div class="col-sm-12 col-md-4 col-lg-4">
+                        <div class="d-grid gap-2">
+                            <button class="btn btn-dark">Begin Quiz</button>
+                        </div>
+                    </div>
+                    <div class="col-sm-12 col-md-4 col-lg-4"></div>
+                </div>
+            </div>
+            <hr />
+            <!-- Quiz Answer Part -->
+            <div class="my-5">
+                <h2>Answer the following questions...</h2>
+            </div>
+            <div class="questions">
+                <p class="mb-2">Question-1</p>
+                <select class="form-select" multiple aria-label="multiple select example">
+                    <option value="1">- Lorem ipsum dolor sit, amet consectetur adipisicing elit. Repellendus, natus.</option>
+                    <option value="2">
+                        - Lorem ipsum dolor sit amet consectetur adipisicing elit. Natus maiores labore perferendis repudiandae! Sed, libero
+                        cupiditate.
+                    </option>
+                    <option value="3">- Lorem ipsum dolor sit amet consectetur, adipisicing elit.</option>
+                </select>
+            </div>
+
+            <div class="questions">
+                <p class="mb-2">Question-2</p>
+                <select class="form-select" multiple aria-label="multiple select example">
+                    <option value="1">- Lorem ipsum dolor sit, amet consectetur adipisicing elit. Repellendus, natus.</option>
+                    <option value="2">
+                        - Lorem ipsum dolor sit amet consectetur adipisicing elit. Natus maiores labore perferendis repudiandae! Sed, libero
+                        cupiditate.
+                    </option>
+                    <option value="3">- Lorem ipsum dolor sit amet consectetur, adipisicing elit.</option>
+                </select>
+            </div>
+
+            <div class="questions">
+                <p class="mb-2">Question-3</p>
+                <select class="form-select" multiple aria-label="multiple select example">
+                    <option value="1">- Lorem ipsum dolor sit, amet consectetur adipisicing elit. Repellendus, natus.</option>
+                    <option value="2">
+                        - Lorem ipsum dolor sit amet consectetur adipisicing elit. Natus maiores labore perferendis repudiandae! Sed, libero
+                        cupiditate.
+                    </option>
+                    <option value="3">- Lorem ipsum dolor sit amet consectetur, adipisicing elit.</option>
+                </select>
+            </div>
+
+            <!-- Submit Button -->
+            <div>
+                <div class="row">
+                    <div class="col-sm-12 col-md-4 col-lg-4"></div>
+                    <div class="col-sm-12 col-md-4 col-lg-4">
+                        <div class="d-grid gap-2">
+                            <button class="btn btn-dark">Submit Quiz</button>
+                        </div>
+                    </div>
+                    <div class="col-sm-12 col-md-4 col-lg-4"></div>
+                </div>
+            </div>
+        </div>
+    </main>
+</body>
+</html>
