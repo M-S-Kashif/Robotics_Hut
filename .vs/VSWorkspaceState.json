@@ -1,7 +1,8 @@
 {
   "ExpandedNodes": [
-    ""
+    "",
+    "\\views"
   ],
-  "SelectedNode": "\\controller",
+  "SelectedNode": "\\views\\student",
   "PreviewInSolutionExplorer": false
 }
